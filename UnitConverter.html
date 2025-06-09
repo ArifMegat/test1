@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <title>Unit Conversion</title>
+    
+    <script>
+      var output;
+      function CM_METER() {
+        let input = parseFloat(document.getElementById("input").value);
+        let answer = input/100;
+        output = "CM to Meter : ";
+        document.getElementById("ans").innerHTML = "After convert " + output + " " + answer;
+      }
+      function METER_CM() {
+        let input = parseFloat(document.getElementById("input").value);
+        let answer = input * 100;
+        output = "Meter to CM : ";
+        document.getElementById("ans").innerHTML = "After convert " + output + " " + answer;
+      }
+      function Meter_KM() {
+        let input = parseFloat(document.getElementById("input").value);
+        let answer = input/1000;
+        output = "Meter to KM : ";
+        document.getElementById("ans").innerHTML = "After convert " + output + " " + answer;
+      }
+      function KM_Meter() {
+        let input = parseFloat(document.getElementById("input").value);
+        let answer = input * 1000;
+        output = "KM to Meter : ";
+        document.getElementById("ans").innerHTML = "After convert " + output + " " + answer;
+      }
+      
+    </script>
+  </head>
+  <body>
+    <div class="w3-container w3-teal">
+      <h1 style="text-align: center">Welcome to my Unit Converter</h1>
+    </div>
+    <br /><br />
+    <h4 style="text-align: center">Enter your value here..</h4>
+    <input
+      class="w3-input w3-round w3-border"
+      type="number"
+      id="input"
+      style="border-color: #000"
+    />
+    <br>
+    <div style="text-align: center;">
+        <input class="" type="button" onclick ="CM_METER()" id="tot_a" value="CM to Meter"
+    style="background-color: aqua; width: 300px"></input><br>
+     <input type="button" onclick ="METER_CM()" id="tot_b" value="Meter to CM"
+        style="background-color: bisque; width:300px"></input><br>
+     <input type="button" onclick ="Meter_KM()" id="tot_m" value="Meter to KM"
+    style="background-color: yellowgreen; width:300px"></input><br>
+     <input type="button" onclick ="KM_Meter()" id="tot_d" value="KM to Meter"
+    style="background-color: brown; width:300px"></input>
+    </div>
+    <br><br>
+    <div class="w3-container w3-gray">
+    <p id="ans"></p>
+    </div>
+   <br />
+    <footer style="
+  background-image: url('gambar/unit.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 300px; /* or however tall your footer is */
+"></footer>
+<div class="w3-container w3-teal">
+      <p style="text-align: center">Thank you for using my Unit Converter :)</p>
+    </div>
+  </body>
+</html>

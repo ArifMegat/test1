@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--Megat Arif Idlan Bin Isnin A24DWO2O6-->
+<html>
+  <head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <title>Income Tax Calculator</title>
+    <style>
+      table {
+        margin-left: auto;
+        margin-right: auto;
+        border-collapse: collapse;
+      }
+      th {
+        border: 1px solid black;
+        background-color: rgb(0, 153, 255);
+        text-align: center;
+        border-collapse: collapse;
+      }
+      td {
+        border: 1px solid black;
+        background-color: rgb(0, 238, 255);
+        text-align: center;
+        border-collapse: collapse;
+      }
+    </style>
+    <script>
+      function CalculateTax() {
+        let price = parseFloat(document.getElementById("price").value);
+        if (price >= 0 && price <= 5000) {
+          document.getElementById("output").innerHTML =
+            "Your tax amount is : RM0";
+        } else if (price >= 5001 && price <= 20000) {
+          let tax1 = price - 5000;
+          let result = tax1 * (1 / 100) + 0;
+          document.getElementById("output").innerHTML =
+            "Your tax amount is : RM" + result;
+        } else if (price >= 20001 && price <= 35000) {
+          let tax1 = price - 20000;
+          let result = tax1 * (3 / 100) + 150;
+          document.getElementById("output").innerHTML =
+            "Your tax amount is : RM" + result;
+        } else if (price >= 35001 && price <= 50000) {
+          let tax1 = price - 35000;
+          let result = tax1 * (8 / 100) + 600;
+          document.getElementById("output").innerHTML =
+            "Your tax amount is : RM" + result;
+        } else if (price >= 50001 && price <= 70000) {
+          let tax1 = price - 50000;
+          let result = tax1 * (13 / 100) + 1800;
+          document.getElementById("output").innerHTML =
+            "Your tax amount is : RM" + result;
+        } else if (price >= 70001 && price <= 100000) {
+          let tax1 = price - 70000;
+          let result = tax1 * (21 / 100) + 4400;
+          document.getElementById("output").innerHTML =
+            "Your tax amount is : RM" + result;
+        } else if (price >= 100001 && price <= 250000) {
+          let tax1 = price - 100000;
+          let result = tax1 * (24 / 100) + 10700;
+          document.getElementById("output").innerHTML =
+            "Your tax amount is : RM" + result;
+        } else if (price >= 250001 && price <= 400000) {
+          let tax1 = price - 250000;
+          let result = tax1 * (24.5 / 100) + 46700;
+          document.getElementById("output").innerHTML =
+            "Your tax amount is : RM" + result;
+        } else if (price >= 400001 && price <= 600000) {
+          let tax1 = price - 400000;
+          let result = tax1 * (25 / 100) + 83450;
+          document.getElementById("output").innerHTML =
+            "Your tax amount is : RM" + result;
+        } else if (price >= 600001 && price <= 1000000) {
+          let tax1 = price - 600000;
+          let result = tax1 * (26 / 100) + 133450;
+          document.getElementById("output").innerHTML =
+            "Your tax amount is : RM" + result;
+        } else if (price >= 1000001 && price <= 2000000) {
+          let tax1 = price - 1000000;
+          let result = tax1 * (28 / 100) + 237450;
+          document.getElementById("output").innerHTML =
+            "Your tax amount is : RM" + result;
+        } else {
+          let tax1 = price - 2000000;
+          let result = tax1 * (30 / 100) + 517450;
+          document.getElementById("output").innerHTML =
+            "Your tax amount is : RM" + result;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="w3-container w3-teal">
+      <h1 style="text-align: center">Welcome to my tax calculator</h1>
+    </div>
+    <h2 style="text-align: center">This is the tax table</h2>
+    <table>
+      <tr>
+        <th>Category</th>
+        <th>Chargeable income</th>
+        <th>Calculations(RM)</th>
+        <th>Rate%</th>
+        <th>Tax(RM)</th>
+      </tr>
+      <tr>
+        <td>A</td>
+        <td>0-5000</td>
+        <td>On the first 5,000</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>B</td>
+        <td>5,001-20,000</td>
+        <td>On the first 5,000<br />Next 15,000</td>
+        <td>1</td>
+        <td>0<br />150</td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td>20,001-35,000</td>
+        <td>On the first 20,000<br />Next 15,000</td>
+        <td>3</td>
+        <td>150<br />450</td>
+      </tr>
+      <tr>
+        <td>D</td>
+        <td>35,001-50,000</td>
+        <td>On the first 35,000<br />Next 15,000</td>
+        <td>8</td>
+        <td>600<br />1,200</td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td>50,001-70,000</td>
+        <td>On the first 50,000<br />Next 20,000</td>
+        <td>13</td>
+        <td>1800<br />2600</td>
+      </tr>
+      <tr>
+        <td>F</td>
+        <td>70,001-100,000</td>
+        <td>On the first 70,000<br />Next 30,000</td>
+        <td>21</td>
+        <td>4,400<br />6,300</td>
+      </tr>
+      <tr>
+        <td>G</td>
+        <td>100,001-250,000</td>
+        <td>On the first 100,000<br />Next 150,000</td>
+        <td>24</td>
+        <td>10,700<br />36,000</td>
+      </tr>
+      <tr>
+        <td>H</td>
+        <td>250,001-400,000</td>
+        <td>On the first 250,000<br />Next 150,000</td>
+        <td>24.5</td>
+        <td>46,700<br />36,750</td>
+      </tr>
+      <tr>
+        <td>I</td>
+        <td>400,001-600,000</td>
+        <td>On the first 400,000<br />Next 200,000</td>
+        <td>25</td>
+        <td>83,450<br />50,000</td>
+      </tr>
+      <tr>
+        <td>J</td>
+        <td>600,001-1,000,000</td>
+        <td>On the first 600,000<br />Next 400,000</td>
+        <td>26</td>
+        <td>133,450<br />104,000</td>
+      </tr>
+      <tr>
+        <td>K</td>
+        <td>1,000,001-2,000,000</td>
+        <td>On the first 1,000,000<br />Next 1,000,000</td>
+        <td>28</td>
+        <td>237,450<br />280,000</td>
+      </tr>
+      <tr>
+        <td>L</td>
+        <td>Exceeding 2,000,000</td>
+        <td>On the first 2,000,000<br />Next ringgit</td>
+        <td>30</td>
+        <td>517,450<br />.....</td>
+      </tr>
+    </table>
+    <h2>Don't worry we will calculate it for you :)</h2>
+    <p>Enter your yearly income in here : (RM)</p>
+    <input type="number" id="price" class="w3-input w3-round w3-border" />
+
+    <input
+      type="button"
+      onclick="CalculateTax()"
+      class="w3-button w3-block w3-border"
+      value="Calculate"
+      style="background-color: black; color: white"
+    />
+    <br />
+    <div class="w3-container w3-gray">
+      <p id="output"></p>
+    </div>
+    <br />
+    <footer
+      style="
+        background-image: url('gambar/tax.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 300px; /* or however tall your footer is */
+      "
+    ></footer>
+    <div class="w3-container w3-teal">
+      <p style="text-align: center">Thank you for using my tax calculator :)</p>
+    </div>
+  </body>
+</html>

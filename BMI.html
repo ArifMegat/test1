@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <title>BMI Checker for adult</title>
+    <style>
+      table {
+        margin-left: auto;
+        margin-right: auto;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        text-align: center;
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      function Calculate() {
+        let height = parseFloat(document.getElementById("height").value);
+        let weight = parseFloat(document.getElementById("weight").value);
+        let next = height / 100;
+        let then = next * next;
+        let final = weight / then;
+        var status;
+        if (final <= 18.4) {
+          status = "Underweight";
+        } else if (final >= 18.5 && final <= 24.9) {
+          status = "Normal";
+        } else if (final >= 25.0 && final <= 39.9) {
+          status = "Overweight";
+        } else {
+          status = "Obese";
+        }
+        document.getElementById("output").innerHTML =
+          "Your BMI is : " + final + " and your status is : " + status;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="w3-container w3-teal">
+      <h1 style="text-align: center">Welcome to my BMI checker</h1>
+    </div>
+    <h3 style="text-align: center">This is the BMI table for adult</h3>
+    <table>
+      <tr>
+        <th>BMI</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td style="background-color: bisque"><= 18.4</td>
+        <td>Underweight</td>
+      </tr>
+      <tr>
+        <td style="background-color: aquamarine">18.5 - 24.9</td>
+        <td>Normal</td>
+      </tr>
+      <tr>
+        <td style="background-color: blueviolet">25.0-39.9</td>
+        <td>Overweight</td>
+      </tr>
+      <tr>
+        <td style="background-color: brown">>= 40.0</td>
+        <td>Obese</td>
+      </tr>
+    </table>
+    <br />
+    <br />
+    <p>Enter your weight in KG</p>
+    <br />
+    <input
+      type="number"
+      id="weight"
+      class="w3-input w3-round w3-border"
+    /><br />
+    <p>Enter your height in CM</p>
+    <br />
+    <input
+      type="number"
+      id="height"
+      class="w3-input w3-round w3-border"
+    /><br />
+    <br />
+    <input
+      type="button"
+      onclick="Calculate()"
+      class="w3-button w3-block w3-border"
+      value="Calculate my BMI value"
+    />
+    <br />
+    <h4>Output here</h4>
+
+    <p id="output"></p>
+    <br /><br />
+    <footer
+      style="
+        background-image: url('gambar/bmi.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 300px; /* or however tall your footer is */
+      "
+    ></footer>
+    <div class="w3-container w3-teal">
+      <p style="text-align: center">Thank you for using my BMI Checker :)</p>
+    </div>
+  </body>
+</html>

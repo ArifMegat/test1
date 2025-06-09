@@ -1,0 +1,82 @@
+<!doctype html><!--Megat Arif Idlan Bin Isnin A24DWO2O6-->
+<html>
+    <head>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+        <title>Simple Calculator Program</title>
+        <script>
+            function Add(){
+                let no1 = parseFloat(document.getElementById("no1").value);
+                let no2 = parseFloat(document.getElementById("no2").value);
+                let add1 = no1 + no2;
+                document.getElementById("ans").value = "Result after add is : " + add1;
+            }
+            function Subtract(){
+                let no1 = parseFloat(document.getElementById("no1").value);
+                let no2 = parseFloat(document.getElementById("no2").value);
+                let sub = no1 - no2;
+                document.getElementById("ans").value = "Result after substract is : " + sub;
+            }
+            function Multiply(){
+                let no1 = parseFloat(document.getElementById("no1").value);
+                let no2 = parseFloat(document.getElementById("no2").value);
+                let mul = no1 * no2;
+                document.getElementById("ans").value = "Result after multiply is : " + mul;
+            }
+            function Divide(){
+                let no1 = parseFloat(document.getElementById("no1").value);
+                let no2 = parseFloat(document.getElementById("no2").value);
+                let bahagi = no1 / no2;
+                document.getElementById("ans").value = "Result after divide is : " + bahagi;
+            }
+            function Clear(){
+                document.getElementById("no1").value = "";
+                document.getElementById("no2").value = "";
+                document.getElementById("ans").value = "";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="w3-container w3-teal">
+      <h1 style="text-align: center">Welcome to my simple calculator</h1>
+    </div>
+        <h1>Online Calculator</h1>
+        <h2>Please enter two numbers to be calculated</h2>
+        <form>
+            <fieldset>
+                <legend>Enter here</legend>
+                First Number: 
+                <br>
+                <input type ="number" id ="no1"></input>
+                <br>
+                <br>
+                Second Number:
+                <br>
+                <input type="number" id="no2"></input>
+                <br>
+                <br>
+                Then choose any operation you want to do :)
+                <br>
+                <input type="button" onclick ="Add()" id="tot_a" value="Add" style="background-color: aqua; width: 300px"></input><br>
+                <input type="button" onclick ="Subtract()" id="tot_b" value="Subtract" style="background-color: bisque; width:300px"></input><br>
+                <input type="button" onclick ="Multiply()" id="tot_m" value="Multiply" style="background-color: yellowgreen; width:300px"></input><br>
+                <input type="button" onclick ="Divide()" id="tot_d" value="Divide" style="background-color: brown; width:300px"></input>
+                <br><br>
+                Result:
+                <br>
+                <input type="text" id="ans" readonly style="width:500px">
+                <br><br>
+                <input type="button" onclick ="Clear()" id="clear" value="Clear" style="background-color: black; color:white; width:300px"></input>
+            </fieldset>
+        </form>
+        <footer style="
+  background-image: url('gambar/cal.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 300px; /* or however tall your footer is */
+"></footer>
+        <div class="w3-container w3-teal">
+      <p style="text-align: center">Thank you for using my simple calculator :)</p>
+    </div>
+    </body>
+</html>
